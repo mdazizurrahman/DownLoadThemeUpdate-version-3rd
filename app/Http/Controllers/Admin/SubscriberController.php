@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Subscriber;
-use Brian2694\Toastr\Toastr;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -25,7 +25,7 @@ class SubscriberController extends Controller
         {
             $subscriber = Subscriber::findOrFail($subscriber)->delete();
             Toastr::success('Subscriber Successfully Deleted','Success');
-            return redirec()->back();
+            return redirect()->back();
         }else{
 
             Toastr::error('Please login first! then next Process','Error');

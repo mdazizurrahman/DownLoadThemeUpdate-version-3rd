@@ -141,17 +141,17 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xl-4">
                             <div class="single-meadle-footer">
                                 <div class="title">
-                                    <h3>Email Newsletter</h3>
+                                    <h3>{{__('Email Newsletter')}}</h3>
                                 </div>
                                 <div class="newsletter-details">
                                     <form action="{{route('subscriber.store')}}" method="POST">
                                         @csrf
                                         <div class="row clearfix">
                                         <input name="email" type="email" placeholder="Email Address" />
-                                        <button type="submit">SUBSCRIBE</button>
+                                        <button type="submit">{{__('SUBSCRIBE')}}</button>
                                     </form>
-                                    <p>Sign up for new Recover Transportation & Logistics Company content, updates, surveys & offers</p>
-                                    <a href="">Privacy Policy</a>
+                                    <p>{{__('Sign up for new Recover Transportation & Logistics Company content, updates, surveys & offers')}}</p>
+                                    <a href="">{{__('Privacy Policy')}}</a>
                                 </div>
                             </div>
                         </div>

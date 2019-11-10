@@ -39,23 +39,27 @@
                                 </tr>
                                 </tfoot>
                                 <tbody>
-                                @foreach($subscribers as $key=>$subscriber)
-                                    <tr>
-                                        <td>{{ $key + 1 }}</td>
-                                        <td>{{ $subscriber->email }}</td>
-                                        <td>{{ $subscriber->created_at->diffForHumans() }}</td>
-                                        <td >
-                                            <button class="btn btn-danger waves-effect" type="button" onclick="deletesubscriber({{ $subscriber->id }})">
-                                                <i class="material-icons">delete</i>
-                                            </button>
-                                            <form id="delete-form-{{ $subscriber->id }}" action="{{ route('admin.subscriber.destroy',$subscriber->id) }}" method="POST" style="display: none;">
-                                                @csrf
-                                                @method('DELETE')
-                                            </form>
-                                        </td>
-                                    </tr>
-                                @endforeach
 
+                                @if(Auth::check() && Auth::user()->role->id == 1)
+                                    @foreach($subscribers as $key=>$subscriber)
+                                        <tr>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $subscriber->email }}</td>
+                                            <td>{{ $subscriber->created_at->diffForHumans() }}</td>
+                                            <td >
+                                                <button class="btn btn-danger waves-effect" type="button" onclick="deletesubscriber({{ $subscriber->id }})">
+                                                    <i class="material-icons">delete</i>
+                                                </button>
+                                                <form id="delete-form-{{ $subscriber->id }}" action="{{ route('admin.subscriber.destroy',$subscriber->id) }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    @else
+                                    <h1>you are not authorized its access</h1>
+                                @endif
                                 </tbody>
                             </table>
                         </div>
