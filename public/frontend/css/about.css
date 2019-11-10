@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,700i,900,900i');
+
+
+/*===================
+ DEFAULT  CSS
+=============== */
+html,
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+     font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:visited,
+a:focus,
+a:active,
+a:hover {
+    text-decoration: none;
+    outline: none;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+a,
+button {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+}
+
+a {
+    font-size: 14px;
+}
+.px{
+	padding:80px 0px;
+}
+.ps{
+	padding:30px 0px;
+}
+.fix{
+	overflow:hidden;
+}
+
+
+
+.section-title {
+    text-align: center;
+}
+.section-title h2 {
+    color: #000;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+}
+.section-title h2:before {
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: #ea3e56;
+    position: absolute;
+    top: 43%;
+    left: 0;
+    margin: auto;
+    right: 0;
+}
+.section-title h2:after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: #ea3e56;
+    position: absolute;
+    top: 43%;
+    left: 0;
+    margin: auto;
+    right: 0;
+    border-left: 6px solid #e7e7e7;
+    border-right: 5px solid #e7e7e7;
+}
+.section-title p{
+	margin: 0 200px;
+}
+/*===================
+ DEFAULT  CSS
+=============== */
+
+/* =========
+TYPOGRAPHY
+ ===========*/
+ h1{
+	font-family: 'Merriweather', serif;
+    margin-top: 0;
+	letter-spacing:3px;
+	font-weight: 700;
+}
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3 {
+    margin-top: 0;
+	letter-spacing:2px;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 56px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 46px;
+}
+
+h3 {
+    font-size: 30px;
+    line-height: 38px
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 28px
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 26px;
+}
+p {
+font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+  color: #646786;
+  font-family: 'Roboto', sans-serif;
+}
+ 
+/* =========
+TYPOGRAPHY 
+===========*/
+
+/* =========
+TOP HEADER 
+===========*/
+.top-header {
+    height: 70px;
+    background-color: #0e8ce4;
+    display: -webkit-box;
+}
+.header-text {
+    margin: 25px 0;
+}
+.header-text p{
+	color:#fff;
+}
+.header-rifgt {
+    text-align: right;
+}
+.header-social {
+    margin: -4% 9%;
+}
+
+.header-social ul li {
+    list-style: none;
+    display: inline-block;
+	margin-left:20px;
+	
+}
+.header-social ul li a {
+    font-size: 18px;
+    display: block;
+    color: #ffffff;
+}
+.header-social ul li a:hover {
+    -webkit-transition: .7s;
+    box-shadow: 2px 3px 3px 0px;
+    border-radius: 20px;
+}
+/* =========
+TOP HEADER 
+===========*/
+
+
+/* =========
+ABOUT BG
+===========*/
+.contact-img-area {
+    background-image: url(../img/contact-bg/contact-bg.jpg);
+    height: 360px;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contact-img-area:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #000000d9;
+}
+.contact-text {
+    position: absolute;
+    padding: 10% 16%;
+}
+.contact-text h1 {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: roboto sans-serif;
+}
+/* =========
+ABOUT BG
+===========*/
+
+/* about */
+video.video-background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -100;
+}
+.downloadtemplate-about-video.px {
+    height: 650px;
+    position: relative;
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.about-left{
+	
+}
+.about-left img {
+    height: 350px;
+}
+.about-right-text h2 {
+    text-transform: capitalize;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: roboto sans-serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.about-down-text {
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 27px;
+    letter-spacing: 1px;
+}
+.about-up-text {
+    font-size: 17px;
+    line-height: 27px;
+    letter-spacing: 1px;
+}
+/* about */
+
+.map-area iframe{
+	width:100%;
+}
+/* contact */
+
+
+/* =========
+about service
+===========*/
+.downloadtemplate-about-service-tag{
+	margin-top:20px;
+	
+}
+.downloadtemplate-about-service-tag h4 {
+    font-size: 20px;
+}
+.downloadtemplate-about-service-tag p{
+	
+}
+/* =========
+about service
+===========*/
+
+/* ABOUT YOUTUBE TUTORIAL */
+.downloadtemplate-template-tutorial-video-box {
+    border: 1px solid #0e8ce4;
+    padding: 25px;
+}
+
+/* ABOUT YOUTUBE TUTORIAL */
+
+/* DOWNLOADTEMPLATE ABOUT ADDERSS */
+.downloadtemplate-about-adderss-logo img {
+    width: 200px;
+}
+.downloadtemplate-about-adderss-text h4{
+	margin-bottom:20px;
+}
+.downloadtemplate-about-adderss-sidbar h4 {
+    font-size: 21px;
+    text-transform: capitalize;
+}
+/* DOWNLOADTEMPLATE ABOUT ADDERSS */

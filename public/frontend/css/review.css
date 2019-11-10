@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,700i,900,900i');
+
+
+/*===================
+ DEFAULT  CSS
+=============== */
+html,
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+     font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:visited,
+a:focus,
+a:active,
+a:hover {
+    text-decoration: none;
+    outline: none;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+a,
+button {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+}
+
+a {
+    font-size: 14px;
+}
+.px{
+	padding:80px 0px;
+}
+.ps{
+	padding:30px 0px;
+}
+.fix{
+	overflow:hidden;
+}
+
+
+
+.section-title {
+    text-align: center;
+}
+.section-title h2 {
+    color: #000;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+}
+.section-title h2:before {
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: #ea3e56;
+    position: absolute;
+    top: 43%;
+    left: 0;
+    margin: auto;
+    right: 0;
+}
+.section-title h2:after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: #ea3e56;
+    position: absolute;
+    top: 43%;
+    left: 0;
+    margin: auto;
+    right: 0;
+    border-left: 6px solid #e7e7e7;
+    border-right: 5px solid #e7e7e7;
+}
+.section-title p{
+	margin: 0 200px;
+}
+/*===================
+ DEFAULT  CSS
+=============== */
+
+/* =========
+TYPOGRAPHY
+ ===========*/
+ h1{
+	font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+	letter-spacing:3px;
+	font-weight: 700;
+}
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3 {
+    margin-top: 0;
+	letter-spacing:2px;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 56px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 46px;
+}
+
+h3 {
+    font-size: 30px;
+    line-height: 38px
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 28px
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 26px;
+}
+p {
+font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+  color: #646786;
+  font-family: 'Roboto', sans-serif;
+}
+ 
+/* =========
+TYPOGRAPHY 
+===========*/
+
+/* =========
+TOP HEADER 
+===========*/
+.top-header {
+    height: 70px;
+    background-color: #0e8ce4;
+    display: -webkit-box;
+}
+.header-text {
+    margin: 25px 0;
+}
+.header-text p{
+	color:#fff;
+}
+.header-rifgt {
+    text-align: right;
+}
+.header-social {
+    margin: -4% 9%;
+}
+
+.header-social ul li {
+    list-style: none;
+    display: inline-block;
+	margin-left:20px;
+	
+}
+.header-social ul li a {
+    font-size: 18px;
+    display: block;
+    color: #ffffff;
+}
+.header-social ul li a:hover {
+    -webkit-transition: .7s;
+    box-shadow: 2px 3px 3px 0px;
+    border-radius: 20px;
+}
+/* =========
+TOP HEADER 
+===========*/
+
+/* =========
+INFO ARIA 
+===========*/
+.info-logo {
+    padding: 40px 0;
+}
+.mail-info{
+	padding: 40px 0;
+}
+.mail-text{
+	
+}
+.mail-text i {
+    font-size: 30px;
+    position: absolute;
+    color: #0e8ce4;
+    padding: 13px 20px;
+    border: 1px solid #000;
+}
+.mail-text ul li {
+    margin-left: 87px;
+}
+.mail-text h4 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #4e4e4e;
+}
+.mail-text p{
+	
+}
+/* =========
+INFO ARIA 
+===========*/
+/* ===============
+REVIEW 
+=====================*/
+.site-review-area {
+    background: #0e8ce4;
+    padding: 20px;
+}
+.review-text h1 {
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 0 6px 5px #006cb7;
+}
+.review-icon ul li {
+    list-style: none;
+    display: inline-flex;
+}
+.review-icon ul li i {
+    margin-left: 8px;
+    font-size: 22px;
+    color: #ffe835;
+}
+.fivestar {
+    margin-left: 18%;
+}
+.fivestar h5{
+	font-size: 22px;
+    color: #ffe835;
+	
+}
+.review-icon ul li .fivestar i {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    margin-left: 16px;
+}
+.review-all {
+    border: 2px solid #e8e8e8;
+    padding: 20px;
+    background: #f7f7f7;
+}
+.padding{
+	margin-top:20px;
+}
+.comment-text h4 {
+    font-size: 21px;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+    color: #5d5d5d;
+}
+/* ===============
+REVIEW 
+=====================*/
