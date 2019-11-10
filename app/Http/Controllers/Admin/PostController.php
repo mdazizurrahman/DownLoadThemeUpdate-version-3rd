@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
+use App\Notifications\AuthorPostApprovel;
+use App\Notifications\NewPostNotify;
 use App\Post;
+use App\Subscriber;
 use App\Tag;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
@@ -112,6 +116,12 @@ class PostController extends Controller
         $post->save();
         $post->categories()->attach($request->categories);
         $post->tags()->attach($request->tags);
+        $subscribers = Subscriber::all();
+        foreach ($subscribers as $subscriber)
+        {
+            Notification::route('mail',$subscriber->email)
+                ->notify(new NewPostNotify($post));
+        }
         Toastr::success('Post Successfully Save:)','Success');
         return redirect()->route('admin.post.index');
       //  return $request;
@@ -216,6 +226,9 @@ class PostController extends Controller
         $post->save();
         $post->categories()->sync($request->categories);
         $post->tags()->sync($request->tags);
+
+
+
         Toastr::success('Post Successfully Updated:)','Success');
         return redirect()->route('admin.post.index');
     }
@@ -233,6 +246,12 @@ class PostController extends Controller
         {
             $post->is_approved = true;
             $post->save();
+            $post->user->notify(new AuthorPostApprovel($post));
+            foreach ($subscribers as $subscriber)
+            {
+                Notification::route('mail',$subscriber->email)
+                    ->notify(new NewPostNotify($post));
+            }
             Toastr::success('This Post Successfully Approved','Success');
         }else{
             Toastr::if('This Post Allready Approved','Info');
